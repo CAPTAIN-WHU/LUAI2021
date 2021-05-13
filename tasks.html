@@ -16,8 +16,7 @@
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="css/myclean-blog.min.css" rel="stylesheet">
@@ -29,8 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container mContainer">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
@@ -78,8 +76,8 @@
         </div>
     </nav>
 
-      <!-- Page Header -->
-      <header class="masthead m-height" style="background-image: url('images/bgGIF.gif');">
+    <!-- Page Header -->
+    <!-- <header class="masthead m-height" style="background-image: url('images/bgGIF.gif');">
         <div class="overlay" style="background-color: #212529;opacity: 0.85"></div>
         <div class="container">
           <div class="row">
@@ -99,7 +97,34 @@
             </div>
           </div>
         </div>
-      </header>
+      </header> -->
+    <header class="masthead m-height" style="background-image: url('images/bgGIF.gif');">
+        <div class="overlay" style="background-color: #212529;opacity: 0.85"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading m-head">
+                        <h2 style="text-align:center;  margin-top:1.7em ;font-weight: bold;">
+                            The 1st Workshop on
+                        </h2>
+                        <h1 style="text-align:center; font-weight: bold ;font-size: 1.92em;color:#FF9900">
+                            Learning to Understand Aerial Images
+                        </h1>
+                        <h2 style="text-align:center; font-weight: bold; font-style: italic">
+                            in conjunction with IEEE ICCV 2021
+                        </h2>
+                        </h3 style="text-align:center; font-weight: bold; font-style: italic">
+                        October 11, 2021, Montreal, Canada.
+                        </h3>
+                        <!-- <span class="subheading" style="text-align:center; font-weight:bold; font-style: italic"> 
+                            
+                            </span> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <div class="container">
@@ -109,14 +134,12 @@
                     Overview
                 </h2>
                 <p>
-                    We propose four detection tasks. Task1 is to detect instances with oriented bounding boxes. Task2 is to detect instances
-                    with horizontal bounding boxes. 
-                    Task3 is to detect instances objects. Task4 is to detect semantic labels for each pixel. Task 1 and Task 2 are based on DOTA-v2.0. Task3 and Task4 are based on iSAID and GID-15，respectively.
+                    We propose four detection tasks. Task1 is to detect instances with oriented bounding boxes. Task2 is to detect instances with horizontal bounding boxes. Task3 is to detect instances objects. Task4 is to detect semantic labels for each pixel. Task 1 and
+                    Task 2 are based on DOTA-v2.0. Task3 and Task4 are based on iSAID and GID-15，respectively.
                     <!-- The results from task2 are of great practical value.  -->
                     <!-- We recommond you to test your algorithms by way of Task1.  -->
-                    You can use the provided train/val data to train and validate your detector. Validation data may also be used for training
-                    when submitting results on the test set. External data of any form is allowed. But must be reported
-                    during submission. Fine-tuning models that are pretrained on ImageNet or COCO are also allowed.
+                    You can use the provided train/val data to train and validate your detector. Validation data may also be used for training when submitting results on the test set. External data of any form is allowed. But must be reported during submission. Fine-tuning
+                    models that are pretrained on ImageNet or COCO are also allowed.
                 </p>
 
                 <h2>
@@ -124,8 +147,7 @@
                     <!--<strong>(Recommended)</strong> -->
                 </h2>
                 <p>
-                    The purpose of this task is to localize the ground object instances with an oriented bounding box. The oriented bounding
-                    box follows the same format with the original annotation {(x
+                    The purpose of this task is to localize the ground object instances with an oriented bounding box. The oriented bounding box follows the same format with the original annotation {(x
                     <sub>i</sub>, y
                     <sub>i</sub>), i = 1,2,3,4}.
                 </p>
@@ -142,14 +164,11 @@
                     Submission Format
                 </h3>
                 <p>
-                    You will be asked to submit a zip file <a href="example_Task1.zip">(example_Task1.zip)</a> containing results for all test images to evaluate your results.
-                    The results are stored in 16 files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category.  
-                    Each file is in the following format:
+                    You will be asked to submit a zip file <a href="example_Task1.zip">(example_Task1.zip)</a> containing results for all test images to evaluate your results. The results are stored in 16 files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>,
+                    each file contains all the results for a specific category. Each file is in the following format:
                 </p>
                 <div class="alert alert-secondary" role="alert" style="font-size:18px;font-style: italic;font-family:'Times New Roman', Times, serif">
-                        imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub> <br>
-                        imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub> <br>
-                        ...  
+                    imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub> <br> imgname score x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub>                    y<sub>4</sub> <br> ...
                     <!-- x
                     <sub>1</sub> y
                     <sub>1</sub> x
@@ -174,36 +193,29 @@
                     Evaluation Protocol
                 </h3>
                 <p>
-                    The evaluation protocol for the oriented bounding box is a little different from the protocol in the original PASCAL VOC. We
-                    use the intersection over the union area of two polygons(ground truth and prediction) to calculate the
-                    IoU. The rest follows the PASCAL VOC.
+                    The evaluation protocol for the oriented bounding box is a little different from the protocol in the original PASCAL VOC. We use the intersection over the union area of two polygons(ground truth and prediction) to calculate the IoU. The rest follows the
+                    PASCAL VOC.
                 </p>
                 <h2>
                     <b>Task2</b> - Detection with horizontal bounding boxes
                 </h2>
                 <p>
-                    Detecting object with horizontal bounding boxes is usual in many previous contests for object detection. The aim of this
-                    task is to accurately localize the instance in terms of horizontal bounding box with (x, y, w, h) format.
-                    In the task, the ground truths for training and testing are generated by calculating the axis-aligned
-                    bounding boxes over original annotated bounding boxes.
+                    Detecting object with horizontal bounding boxes is usual in many previous contests for object detection. The aim of this task is to accurately localize the instance in terms of horizontal bounding box with (x, y, w, h) format. In the task, the ground
+                    truths for training and testing are generated by calculating the axis-aligned bounding boxes over original annotated bounding boxes.
                 </p>
                 <h3>
                     Submission Format
                 </h3>
                 <p>
-                    You will be asked to submit a zip file <a href="example_Task2.zip">(example_Task2.zip)</a> containing results for all test images to evaluate your results.
-                    The results are stored in 16 files,
-                    <strong style="color:blue">"Task2_plane.txt, Task2_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category.
-                    The format of the results is:
+                    You will be asked to submit a zip file <a href="example_Task2.zip">(example_Task2.zip)</a> containing results for all test images to evaluate your results. The results are stored in 16 files,
+                    <strong style="color:blue">"Task2_plane.txt, Task2_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category. The format of the results is:
                 </p>
 
                 <div class="alert alert-secondary" role="alert" style="font-size:18px;font-style: italic;font-family:'Times New Roman', Times, serif">
                     <!-- x y w h category score
                     <br> x y w h category score
                     <br> ... -->
-                    imgname score xmin ymin xmax ymax <br>
-                    imgname score xmin ymin xmax ymax <br>
-                    ... 
+                    imgname score xmin ymin xmax ymax <br> imgname score xmin ymin xmax ymax <br> ...
                 </div>
                 <!-- <a href="submissionformat/example_task2.rar">An example submission of task1</a> -->
 
@@ -233,9 +245,7 @@
                     Evaluation Protocol
                 </h3>
                 <p>
-                    The evaluation protocol for iSAID is similar to the MS COCO metric. The only
-                    difference is that we increase the maximum number of instances for evaluation from 100 to 1000, since iSAID
-                    can contain 1,000 instances per image.
+                    The evaluation protocol for iSAID is similar to the MS COCO metric. The only difference is that we increase the maximum number of instances for evaluation from 100 to 1000, since iSAID can contain 1,000 instances per image.
                 </p>
 
                 <h2>
@@ -248,13 +258,10 @@
                     Submission Format
                 </h3>
                 <p>
-                    Participants will be asked to submit a zip file containing results for all test images. The
-                    by a specific color. For example:
-                    expected format for each image is a prediction image with the same resolution. Each category is represented:
+                    Participants will be asked to submit a zip file containing results for all test images. The by a specific color. For example: expected format for each image is a prediction image with the same resolution. Each category is represented:
                 </p>
                 <div class="alert alert-secondary" role="alert" style="font-size:18px;font-style: italic;font-family:'Times New Roman', Times, serif">
-                    Paddyfield : (R : 0;G : 200;B : 0)<br>
-                    Urbanresidential : (R : 250;G : 0;B : 150)<br>
+                    Paddyfield : (R : 0;G : 200;B : 0)<br> Urbanresidential : (R : 250;G : 0;B : 150)<br>
                 </div>
 
                 <h3>
@@ -331,7 +338,7 @@
                         </li>
                         <li class="list-inline-item">
                             <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//captain-whu.github.io/DOAI2019"> -->
-                                <a href="https://facebook.com/sharer.php?display=page&u=https%3A//captain-whu.github.io/LUAI2021">
+                            <a href="https://facebook.com/sharer.php?display=page&u=https%3A//captain-whu.github.io/LUAI2021">
                                 <span class="fa-stack fa-lg">
                                     <i class="fas fa-circle fa-stack-2x"></i>
                                     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
