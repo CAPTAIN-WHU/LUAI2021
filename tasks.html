@@ -127,12 +127,11 @@
                     Overview
                 </h2>
                 <p>
-                    We propose four detection tasks. Task1 is to detect instances with oriented bounding boxes. Task2 is to detect instances with horizontal bounding boxes. Task3 is to detect instances objects. Task4 is to detect semantic labels for each pixel. Task 1 and
-                    Task 2 are based on DOTA-v2.0. Task3 and Task4 are based on iSAID and GID-15，respectively.
-                    <!-- The results from task2 are of great practical value.  -->
-                    <!-- We recommond you to test your algorithms by way of Task1.  -->
-                    You can use the provided train/val data to train and validate your detector. Validation data may also be used for training when submitting results on the test set. External data of any form is allowed. But must be reported during submission. Fine-tuning
-                    models that are pretrained on ImageNet or COCO are also allowed.
+We propose four detection tasks. Task1 is to detect instances with oriented bounding boxes. Task2 is to detect instances with horizontal bounding boxes. Task3 is to detect semantic labels for each pixel. Task 1 and
+Task 2 is based on DOTA-v2.0. Task3 is based on GID-15.
+You can use the provided train/val data to train and validate your detector. Validation data may also be used for training when submitting results on the test set. External data of any form is allowed. But must be reported during submission. Fine-tuning
+models that are pretrained on ImageNet or COCO are also allowed.
+
                 </p>
 
                 <h2>
@@ -157,7 +156,7 @@
                     Submission Format
                 </h3>
                 <p>
-                    You will be asked to submit a zip file <a href="example_Task1.zip">(example_Task1.zip)</a> containing results for all test images to evaluate your results. The results are stored in 16 files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>,
+                    You will be asked to submit a zip file <a href="example_Task1.zip">(example of task1)</a> containing results for all test images to evaluate your results. The results are stored in 16 files, <strong style="color:blue">"Task1_plane.txt, Task1_storage-tank.txt, ..."</strong>,
                     each file contains all the results for a specific category. Each file is in the following format:
                 </p>
                 <div class="alert alert-secondary" role="alert" style="font-size:18px;font-style: italic;font-family:'Times New Roman', Times, serif">
@@ -200,7 +199,7 @@
                     Submission Format
                 </h3>
                 <p>
-                    You will be asked to submit a zip file <a href="example_Task2.zip">(example_Task2.zip)</a> containing results for all test images to evaluate your results. The results are stored in 16 files,
+                    You will be asked to submit a zip file <a href="example_Task2.zip">(example of task2)</a> containing results for all test images to evaluate your results. The results are stored in 16 files,
                     <strong style="color:blue">"Task2_plane.txt, Task2_storage-tank.txt, ..."</strong>, each file contains all the results for a specific category. The format of the results is:
                 </p>
 
@@ -222,27 +221,7 @@
 
 
                 <h2>
-                    <b>Task3</b> - Instance Segmentation
-                </h2>
-                <p>
-                    The aim of this task is to segment each individual object instance.
-                </p>
-                <h3>
-                    Submission Format
-                </h3>
-                <p>
-                    The submission format and evaluation protocol follow the MS COCO.
-                </p>
-
-                <h3>
-                    Evaluation Protocol
-                </h3>
-                <p>
-                    The evaluation protocol for iSAID is similar to the MS COCO metric. The only difference is that we increase the maximum number of instances for evaluation from 100 to 1000, since iSAID can contain 1,000 instances per image.
-                </p>
-
-                <h2>
-                    <b>Task4</b> - Semantic Segmentation
+                    <b>Task3</b> - Semantic Segmentation
                 </h2>
                 <p>
                     The aim of this task is to give the semantic category for each pixel in aerial images.
@@ -251,17 +230,20 @@
                     Submission Format
                 </h3>
                 <p>
-                    Participants will be asked to submit a zip file containing results for all test images. The by a specific color. For example: expected format for each image is a prediction image with the same resolution. Each category is represented:
+                    Participants will be asked to submit a zip file <a href="http://47.108.71.49:8008/media/example.zip">(example of task3)</a> containing results (stored in ".png" format) for all test images.
+                    Each ".png" file should have the same name as the corresponding tested image. Image dimensions of result files must be equal to input RGB image dimensions
+                    For example, expected result format for each image is a ".png" image with the same resolution as the tested image.
+                    Each category is represented by a specific value:
                 </p>
                 <div class="alert alert-secondary" role="alert" style="font-size:18px;font-style: italic;font-family:'Times New Roman', Times, serif">
-                    Paddyfield : (R : 0;G : 200;B : 0)<br> Urbanresidential : (R : 250;G : 0;B : 150)<br>
+                    Paddyfield : 5<br> Urbanresidential: 2<br>
                 </div>
 
                 <h3>
                     Evaluation Protocol
                 </h3>
                 <p>
-                    The evaluation protocol adopts the Kappa coefficient.
+                    The evaluation protocol adopts the mIoU.
                 </p>
 
 
