@@ -102,7 +102,7 @@
 					<div class="span12">
 						<!-- //</div>h3 style="font-size:5px"> -->
 						<!-- <strong style="color:red">The table can only be shown on chrome now.</strong>  -->
-						<h2>Task1 - Oriented Leaderboard</h2>
+						<h2>Task1 - Oriented Object Detection Leaderboard</h2>
 						<table id="Task1" class="display" style="width:100%">
 							<thead>
 								<tr>
@@ -144,7 +144,7 @@
 							</tfoot> -->
 						</table>
 
-						<h2>Task2 - Horizontal Leaderboard</h2>
+						<h2>Task2 - Horizontal Object Detection Leaderboard</h2>
 						<table id="Task2" class="display" style="width:100%">
 							<thead>
 								<tr>
@@ -176,15 +176,41 @@
 									<!-- <th>extn</th> -->
 								</tr>
 							</thead>
-							<!-- <tfoot>
+						</table>
+
+                        <h2>Task3 - Semantic Segmentation Leaderboard</h2>
+						<table id="Task3" class="display" style="width:100%">
+							<thead>
 								<tr>
 									<th></th>
-									<th>Name</th>
-									<th>Position</th>
-									<th>Office</th>
-									<th>extn</th>
+									<th>Team</th>
+									<!-- <th>Team Member</th> -->
+									<!-- <th>Institute</th> -->
+									<!-- <th>Description</th> -->
+									<th> mIoU</strong> </th>
+									<th>RR</th>
+									<th>AW</th>
+									<th>PF</th>
+									<th>IL</th>
+									<th>Pond</th>
+                                    <th>Lake</th>
+									<th>TL</th>
+									<th>UR</th>
+									<th>AG</th>
+									<th>NG</th>
+									<th>SL</th>
+									<th>Industrial_land</th>
+									<th>DC</th>
+									<th>River</th>
+									<th>GP</th>
+<!--									<th>HC</th>-->
+<!--									<th>CC</th>-->
+<!--                                    <th>Airport</th>-->
+<!--                                    <th>HP</th>-->
+									<th>Date</th>
+									<!-- <th>extn</th> -->
 								</tr>
-							</tfoot> -->
+							</thead>
 						</table>
 
 					</div>
@@ -359,6 +385,63 @@
 				}
 			});
 		});
+
+
+				$(document).ready(function () {
+			var table3 = $('#Task3').DataTable({
+				"ajax": "leaderboards/learderboard_gid.txt",
+				"columns": [
+					{
+						"className": 'details-control',
+						"orderable": false,
+						"data": null,
+						"defaultContent": ''
+					},
+					{ "data": "TeamNames" },
+					// { "data": "Team Member" },
+					// { "data": "Institute" },
+					{ "data": "mAP" },
+					{ "data": "rural_residential"},
+					{ "data": "arbor_woodland" },
+					{ "data": "paddy_field"},
+					{ "data": "irrigated_land" },
+					{ "data": "pond"},
+					{ "data": "lake" },
+					{ "data": "traffic_land"},
+					{ "data": "urban_residential"},
+					{ "data": "artificial_grassland" },
+					{ "data": "natural_grassland"},
+					{ "data": "shrub_land" },
+					{ "data": "industrial_land"},
+					// { "data": "Harbor" },
+					{ "data": "dry_cropland"},
+					{ "data": "river"},
+					{ "data": "garden_plot"},
+                    // { "data": "AP"},
+                    // { "data": "HP"},
+					{ "data": "date"},
+				],
+				"order": [[2, 'dsc']]
+			});
+
+			// Add event listener for opening and closing details
+			$('#Task3 tbody').on('click', 'td.details-control', function () {
+				var tr = $(this).closest('tr');
+				var row = table3.row(tr);
+
+				if (row.child.isShown()) {
+					// This row is already open - close it
+					row.child.hide();
+					tr.removeClass('shown');
+				}
+				else {
+					// Open this row
+					row.child(format(row.data())).show();
+					tr.addClass('shown');
+				}
+			});
+		});
+
 
   </script>
 
