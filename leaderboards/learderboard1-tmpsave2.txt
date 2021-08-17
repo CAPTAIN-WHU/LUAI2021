@@ -169,7 +169,7 @@
             "HP": 0.223,
             "HC": 0.14,
             "Institute": "SJTU",
-            "TeamNames": "SJTU_PA_Det",
+            "TeamNames": "SJTU-Det",
             "LV": 0.275,
             "CC": 0.286,
             "RA": 0.526,
