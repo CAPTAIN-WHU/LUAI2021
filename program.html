@@ -9,6 +9,7 @@
     <meta name="author" content="">
 
     <title>Learning to Understand Aerial Images (LUAI)</title>
+    <link rel="stylesheet" href="css/w3.css">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +22,18 @@
     <!-- Custom styles for this template -->
     <link href="css/myclean-blog.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bio.css">
+
+    <style>
+        button[name="speaker_btn"]
+		{
+			background: none;
+			border: none;
+			padding: 0;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+    </style>
 </head>
 
 <body>
@@ -135,68 +148,75 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-md-10 mx-auto">
-                <!-- <h2 style="text-align:left; margin-bottom:10px; margin-top:20px; ">
-                    Invited Speakers
-                </h2> -->
-                <!-- <p style="text-align:justify;">
-                    <!-- <ul>
-                        <strong>TBA</strong>
 
-                    </ul> -->
-                <!-- TBA. -->
-                <!-- </p> -->
+            <div class="w3-content w3-center " style="max-width:1080px">
+                <h2 style="text-align:left; margin-bottom:10px; margin-top:20px; ">Invited Speakers</h2>
+                <div class="w3-content w3-center" style="color:#231F20">
+					<div style="max-width:850px; display:inline-block">
+                        <a style="color:#795548" href="javascript:onclick=showBioSpeaker('bio_devis')"><img src="images/Devis.jpg" alt="front" style="width:180px;"/></a>
+                        <div style="margin:10px 0"></div>
+						<h4><button onclick="showBioSpeaker(this.value)" type="button" name="speaker_btn" value="bio_devis" style="color:#795548">Devis Tuia</button></h4>
+                    </div>
+					&emsp;&emsp;&emsp;&emsp;
+
+                    <div style="max-width:850px; display:inline-block">
+                        <a style="color:#795548" href="javascript:onclick=showBioSpeaker('bio_konrad')"><img src="images/Konrad.jpg" alt="front" style="width:180px;"/></a>
+                        <div style="margin:10px 0"></div>
+						<h4><button onclick="showBioSpeaker(this.value)" type="button" name="speaker_btn" value="bio_konrad" style="color:#795548">Konrad Schindler</button></h4>
+                    </div>
+
+
+                    &emsp;&emsp;&emsp;&emsp;
+					<div style="max-width:850px; display:inline-block">
+                        <a style="color:#795548" href="javascript:onclick=showBioSpeaker('bio_dengxin')"><img src="images/Dengxin.jpg" alt="front" style="width:180px;"/></a>
+<!--                        <img src="images/Dengxin.jpg" alt="front" style="width:180px"/>-->
+                        <div style="margin:10px 0"></div>
+						<h4><button onclick="showBioSpeaker(this.value)" type="button" name="speaker_btn" value="bio_dengxin" style="color:#795548">Dengxin Dai</button></h4>
+                    </div>
+
+                </div>
+
+				<div class="bio" id="bio_devis">
+					<p>
+						<a style="color:#795548" href="https://people.epfl.ch/devis.tuia">Devis Tuia</a> (Senior Member, IEEE) received the
+Ph.D. degree from the University of Lausanne, Lausanne, Switzerland, in 2009. He was a Post-Doctoral Researcher with Valéncia, Boulder, CO, USA, and École polytechnique
+fédérale de Lausanne (EPFL), Lausanne. From 2014 to 2017, he was an Assistant Professor with the University of Zurich, Zürich, Switzerland. He then was a Professor at Wageningen University, Wageningen, The Netherlands. Since 2020, he has been an
+Associate Professor at EPFL-Valais, Sion, Switzerland. His research interests include machine learning and computer vision for spatial data and in particular studying new concepts for AI4EO to make images more accessible and models more understandable.
+					</p>
+				</div>
+
+				<div class="bio" id="bio_konrad">
+					<p>
+						<a style="color:#795548" href="https://igp.ethz.ch/personen/person-detail.html?persid=143986">Konrad Schindler</a>
+                        (M’05–SM’12) received the
+Diplomingenieur (M.Tech.) degree from Vienna
+University of Technology, Vienna, Austria, in
+1999, and the Ph.D. degree from Graz University
+of Technology, Graz, Austria, in 2003. He was a
+Photogrammetric Engineer in the private industry and held researcher positions at Graz University of Technology, Monash University, Melbourne, VIC, Australia, and ETH Zurich, Z ¨ urich, ¨
+Switzerland. He was an Assistant Professor of
+Image Understanding with TU Darmstadt, Darmstadt, Germany, in 2009. Since 2010, he has been a Tenured Professor
+of Photogrammetry and Remote Sensing with ETH Zurich. His research ¨
+interests include computer vision, photogrammetry, and remote sensing.
+
+					</p>
+				</div>
+
+				<div class="bio" id="bio_dengxin">
+					<p>
+						<a style="color:#795548" href="https://people.ee.ethz.ch/~daid/">Dengxin Dai</a>
+                        is a senior researcher at MPI for Informatics, where he heads the research group Vision for Autonomous Systems. He also works with the Computer Vision Lab at ETH Zurich on the research project TRACE-Zurich for Autonomous Driving. In 2016, he obtained his PhD at ETH Zurich under the supervision of Prof. Luc Van Gool and Prof. Gerhard Schmitt. During the PhD study, he was working on the project VarCity for City Modeling based on camera data.
+
+					</p>
+				</div>
+
+			</div>
+
+
                 <h2>
-                    Workshop Program
+                    Detailed Workshop Program
                 </h2>
-                <p>
-                    <!-- The <a href="https://drive.google.com/open?id=1vhQwveUtyFN4Cc5dHloumkP4x1m-1GV5">ppts</a> of talkers are available now. -->
-                </p>
-                <!-- <p>
-                    TBA.
-                </p> -->
-                <!-- <table class="minimalistBlack">
-                    <thead>
-                        <tr>
-                            <th width="25%">Time</th>
-                            <th width="60%">Title</th>
-                            <th width="15%">Speakers</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:30</td>
-                            <td>Initial remarks and workshop introduction</td>
-                            <td>Orgnizers</td>
-                        </tr>
-                        <tr>
-                            <td>8:40</td>
-                            <td>Task1 winner talk</td>
-                            <td>winner</td>
-                        </tr>
-                        <tr>
-                            <td>9:00</td>
-                            <td>Task2 winner talk</td>
-                            <td>winner</td>
-                        </tr>
-                        <tr>
-                            <td>9:20</td>
-                            <td>Multi-Scale Weighted Branch Network for Remote Sensing Image Classification (Oral) </td>
-                            <td>Paper author</td>
-                        </tr>
-                        <tr>
-                            <td>9:40</td>
-                            <td>Window Detection in Facades for Aerial Texture Files of 3D CityGML Models
-                                </td>
-                            <td>Paper author</td>
-                        </tr>
-                        <tr>
-                            <td>10:00</td>
-                            <td>Learning Object-Wise Semantic Representation for Detection in Remote Sensing Imagery</td>
-                            <td></td>
-                        </tr>
 
-                    </tbody>
-                </table> -->
                 <ul>
                     <li>
                         <strong>8:00 - 8:05 Welcome, Introduction </strong>
@@ -222,7 +242,8 @@
                     </li>
                     <li>
                         <!-- <strong> 9:10 - 9:30 Invited Speaker: </strong><a href="https://people.epfl.ch/devis.tuia">Prof. Devis Tuia,</a> EPFL.  -->
-                        <strong> 9:30 - 10:15 Invited Speaker 2:</strong> Konrad Schindler
+                        <strong> 9:30 - 10:15 Invited Speaker 2:</strong> Konrad Schindler <br>
+                        <strong>Talk Title:</strong> Towards global high-resolution biomass maps
                     </li>
 
                     <li>
@@ -304,6 +325,22 @@
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
 
+    <script>
+		function showBioSpeaker(val) {
+
+			var content = document.getElementById(val);
+			if (content.style.display === "block") {
+				content.style.display = "none";
+			} else {
+				document.getElementById("bio_devis").style.display = "none"
+				document.getElementById("bio_konrad").style.display = "none"
+				document.getElementById("bio_dengxin").style.display = "none"
+				// document.getElementById("bio_devi").style.display = "none"
+
+				content.style.display = "block";
+			}
+		}
+    </script>
 </body>
 
 </html>
